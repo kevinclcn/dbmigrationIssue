@@ -1,12 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('build') {
       steps {
-        sh '''
-            . ${HOME}/.bashrc
-            ./gradlew bootRepackage
-        '''
+        sh './gradlew bootRepackage'
       }
     }
   }
